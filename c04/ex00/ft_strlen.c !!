@@ -1,0 +1,18 @@
+int ft_strlen(char *str)
+{
+    int x;
+    x = 0;
+
+    while (str[x] != '\0')
+    {
+        x++;
+    }
+    return (x);
+}
+#include <stdio.h>
+
+ int main()
+{
+    char str[] = "Coucouille";
+    printf("%d", ft_strlen(str));
+}
