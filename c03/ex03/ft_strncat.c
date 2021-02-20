@@ -6,14 +6,14 @@
 /*   By: jmauro <jmauro@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 15:23:11 by jmauro            #+#    #+#             */
-/*   Updated: 2021/02/15 20:55:38 by jmauro           ###   ########.fr       */
+/*   Updated: 2021/02/20 12:24:04 by jmauro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char *ft_strncat(char *dest, char *src, unsigned int nb)
 { 
-	int x;
-	int y;
+	unsigned int x;
+	unsigned int y;
 	
 	
 	x = 0;
