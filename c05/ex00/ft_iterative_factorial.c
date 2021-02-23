@@ -6,32 +6,38 @@
 /*   By: jmauro <jmauro@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 09:41:58 by jmauro            #+#    #+#             */
-/*   Updated: 2021/02/19 10:19:33 by jmauro           ###   ########.fr       */
+/*   Updated: 2021/02/22 15:53:39 by jmauro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_iterative_factorial(int nb)
 {
-	int a;
 	int rst;
-	
-	a = 2;
+
 	rst = 1;
 	if (nb < 0)
 		return (0);
-	if (nb == 1)
+	if (nb == 0)
 		return (1);
-	while (a <= nb)
+	while (nb > 1)
 	{
-		rst = a * rst;
-		a++;
+		rst = rst * nb;
+		nb--;
 	}
 	return (rst);
 }
 
 #include <stdio.h>
-int main()
+int main  ()
 {
-	printf("%d\n", ft_iterative_factorial(3));
-	return (0);
+	printf("%d \n",ft_iterative_factorial(4));
+	printf("should be 24\n\n");
+	printf("%d \n",ft_iterative_factorial(0));
+	printf("should be 1\n\n");
+	printf("%d \n",ft_iterative_factorial(13));
+	printf("should be 1932053504\n\n");
+	printf("%d \n",ft_iterative_factorial(1));
+	printf("should be 1\n\n");
+	printf("%d \n",ft_iterative_factorial(-1));
+	printf("should be 0 \n\n");
 }

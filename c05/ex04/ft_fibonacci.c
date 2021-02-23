@@ -6,7 +6,7 @@
 /*   By: jmauro <jmauro@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 13:27:10 by jmauro            #+#    #+#             */
-/*   Updated: 2021/02/18 18:33:27 by jmauro           ###   ########.fr       */
+/*   Updated: 2021/02/22 16:42:36 by jmauro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@ int ft_fibonacci(int index)
 {
 	if (index < 0)
 		return (-1);
-	if (index == 0)
-		return (0);
-	if (index == 1)
-		return (1);
+	if (index < 2)
+		return (index);
 	else
 		return (ft_fibonacci(index-2) + ft_fibonacci(index-1));
 }

@@ -6,40 +6,40 @@
 /*   By: jmauro <jmauro@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 14:15:43 by jmauro            #+#    #+#             */
-/*   Updated: 2021/02/20 21:08:28 by jmauro           ###   ########.fr       */
+/*   Updated: 2021/02/22 14:14:37 by jmauro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
-	int a;
-	int x;
 	int y;
+	int ret;
+	int neg;
 
-	x = 0;
 	y = 0;
-	a = 1;
-	while (str[y] != '\0' && (str[y] == 32 || str[y] == '\t' || str[y] == '\n'
-			|| str[y] == '\r' || str[y] == '\v' || str[y] == '\f'))
+	ret = 0;
+	neg = 1;
+	while (str[y] == ' ' || str[y] == '\t' || str[y] == '\n' ||
+		str[y] == '\r' || str[y] == '\v' || str[y] == '\f')
 	{
-        ++y;
-    }
-    while ((str[y] != '\0') && (str[y] == '-'))
-    {
-        if ((str[y] == '-') && (str[y] == '+'))
-            a = a * -1;
-        ++y;
-    }
-    while ((str[y] != '\0') && (str[y] >= '0') && (str[y] <= '9'))
-    {
-        x = (x * 10) + (str[y] - '0');
-        ++y;
-    }
-    x = a * x;
-    return (x);
+		++y;
+	}
+	while (str[y] == '-' || str[y] == '+')
+	{
+		if (str[y] == '-')
+			neg = -neg;
+		++y;
+	}
+	while (str[y] && (str[y] >= '0' && str[y] <= '9'))
+	{
+		ret = ret * 10 + (str[y] - 48);
+		++y;
+	}
+	return (ret * neg);
 }
+
 
 # include <stdio.h>
 int main ()
